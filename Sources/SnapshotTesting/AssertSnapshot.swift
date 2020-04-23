@@ -168,7 +168,7 @@ public func verifySnapshot<Value, Format>(
     let recording = recording || record
 
     do {
-      let fileUrl = URL(fileURLWithPath: "\(file)", isDirectory: false)
+      let fileUrl = URL(fileURLWithPath: "\(file)_\(UIDevice.identifier)", isDirectory: false)
       let fileName = fileUrl.deletingPathExtension().lastPathComponent
 
       let snapshotDirectoryUrl = snapshotDirectory.map { URL(fileURLWithPath: $0, isDirectory: true) }
